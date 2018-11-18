@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 public class Example
@@ -12,19 +12,20 @@ public class Example
 
         string file = Console.ReadLine();
 
-        // Add some elements to the dictionary. There are no 
+        // Add some elements to the dictionary. There are no
         // duplicate keys, but some of the values are duplicates.
-        openWith.Add("notepad.exe", "txt" );
-        openWith.Add("paint.net", "bmp");
-        openWith.Add("paint.net", "png");
-        openWith.Add("gimp.exe", "xcf");
-        openWith.Add("wordpad.exe", "rtf");
-        
+        openWith.Add("txt", "notepad.exe");
+        openWith.Add("bmp", "paint.net");
+        openWith.Add("png", "paint.net");
+        openWith.Add("xcf", "gimp.exe");
+        openWith.Add("rtf", "wordpad.exe");
+        openWith.Add("exe", "destiny");
+
         string answer;
-        answer = openWith.ContainsKey(file) ? openWith[file] :  null ; 
-        
-     
-        Console.WriteLine("Ваш файл открывается с расширением:", answer );
+        answer = openWith.ContainsKey(file) ? openWith[file] : null;
+
+
+        Console.WriteLine("Ваш файл " + answer +" открывается с расширением: "+ file);
+        Console.ReadKey();
     }
 }
-
